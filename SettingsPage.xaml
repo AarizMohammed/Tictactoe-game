@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToeGame.SettingsPage"
+             Title="SettingsPage"
+             
+             >
+    <ScrollView>
+        <VerticalStackLayout
+            HorizontalOptions="Center"
+            Spacing="200">
+
+
+        <Label Grid.Row="0"
+               Grid.ColumnSpan="2"
+            Text="Settings"
+            FontSize="100"
+
+            />
+    <Grid VerticalOptions="Center"
+          HorizontalOptions="Center"
+          RowSpacing="30"
+          ColumnSpacing="20"
+         >
+
+    <Grid.RowDefinitions>
+         <RowDefinition/>
+         <RowDefinition/>
+         <RowDefinition/>
+
+
+
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+
+    </Grid.ColumnDefinitions>
+
+
+
+
+        <Label 
+            Text="Difficulty"
+            FontSize="30"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            />
+
+
+        <Picker x:Name="DifficultyPicker"
+                Grid.Column="1"
+                FontSize="25"
+                SelectedIndexChanged="DifficultyPicker_SelectedIndexChanged"
+                WidthRequest="200"
+                BackgroundColor="White"
+                TextColor="RoyalBlue"
+                SelectedItem="{Binding SelectDifficulty}"
+                >
+                <Picker.Items>
+                    <x:String>Easy</x:String>
+                    <x:String>Medium</x:String>
+                    <x:String>Hard</x:String>
+
+                </Picker.Items>
+
+            </Picker>
+
+        <Label
+            Grid.Row="1"
+            Text="Themes"
+            FontSize="30"/>
+
+<<<<<<< Updated upstream
+                           </Grid.RowDefinitions>
+                       <HorizontalStackLayout
+                           VerticalOptions="Center"
+                           >
+                           <Image Source="{Binding DemoImage}"
+                                       HeightRequest="200"
+                                       WidthRequest="130"
+                                       Aspect="AspectFit"
+                                       VerticalOptions="Start"
+
+                                       />
+                                <Label Text="{Binding Title}"
+                                       VerticalOptions="Center"
+                                       FontSize="20"
+                                       TextColor="RoyalBlue"
+
+                                       />
+                            </HorizontalStackLayout>
+                           </Grid>
+                        </ViewCell>
+
+               </DataTemplate>
+
+           </ListView.ItemTemplate>
+        </ListView>
+        </Grid>
+       
+=======
+            </Grid>
+>>>>>>> Stashed changes
+            </VerticalStackLayout>
+     </ScrollView>
+</ContentPage>

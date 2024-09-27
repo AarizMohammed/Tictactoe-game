@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToeGame.HumanVsComputerMode"
+             Title="HumanVsComputerMode">
+
+        <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="WidthRequest" Value="200"/>
+            <Setter Property="HeightRequest" Value="200"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontSize" Value="200"/>
+
+        </Style>
+
+    </ContentPage.Resources>
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        Spacing="50">
+        <Label
+            Text="Tic Tac Toe"
+            TextColor="Crimson"
+            FontSize="100"
+            HorizontalOptions="Center"
+
+            />
+        <HorizontalStackLayout
+            Spacing="10"
+            HorizontalOptions="Center">
+        <Label
+            Text="Make your move"
+            TextColor="Crimson"
+            FontSize="40"
+            HorizontalOptions="Center"
+            />
+
+        <Label
+            Text="Player 1"
+            TextColor="Crimson"
+            FontSize="40"
+
+            />
+            </HorizontalStackLayout>
+        <Grid ColumnSpacing="20"
+              RowSpacing="20"
+              WidthRequest="600"
+              HeightRequest="600"
+              >
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Source="tictactoegrid.png"
+                
+               
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="2"
+                WidthRequest="600"
+                HeightRequest="600"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"/>
+
+            <Button x:Name="Grid00Btn"
+               Text=""
+                Clicked="GridBtn_Clicked"
+                />
+
+
+            <Button x:Name="Grid01Btn"
+               Grid.Column="1"
+               Text=""
+               Clicked="GridBtn_Clicked"
+                />
+
+            <Button x:Name="Grid02Btn"
+               Grid.Column="2"
+               Text=""
+               Clicked="GridBtn_Clicked"
+                />
+               
+                
+            <Button x:Name="Grid10Btn"
+               Grid.Row="1"
+               Text=""
+               Clicked="GridBtn_Clicked"
+                />
+               
+               
+            <Button x:Name="Grid11Btn"
+               Grid.Row="1"
+               Grid.Column="1"
+               Text=""
+               Clicked="GridBtn_Clicked"
+                />
+
+            <Button x:Name="Grid12Btn"
+               Grid.Row="1"
+               Grid.Column="2"
+               Text=""
+               Clicked="GridBtn_Clicked"
+                />
+
+            <Button x:Name="Grid20Btn"
+               Grid.Row="2"
+               Text=""
+               Clicked="GridBtn_Clicked"
+                />
+            
+            <Button x:Name="Grid21Btn"
+               Grid.Row="2"
+               Grid.Column="1"
+               Text=""
+               Clicked="GridBtn_Clicked"
+                />
+
+            <Button x:Name="Grid22Btn"
+               Grid.Row="2"
+               Grid.Column="2"
+               Text=""
+               Clicked="GridBtn_Clicked"
+                />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
